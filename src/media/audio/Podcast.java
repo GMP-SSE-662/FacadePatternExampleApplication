@@ -7,7 +7,7 @@ import media.ContinuousMedia;
  * A Podcast is a form of Continuous Media.
  */
 public class Podcast implements ContinuousMedia {
-    String name;
+    private String name;
 
     /**
      * Constructs a new instance of a Podcast.

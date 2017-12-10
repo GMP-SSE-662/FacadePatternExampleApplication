@@ -7,7 +7,7 @@ import media.ContinuousMedia;
  * A Movie is a form of Continuous Media.
  */
 public class Movie implements ContinuousMedia {
-    String name;
+    private String name;
 
     /**
      * Constructs a new instance of a Movie.

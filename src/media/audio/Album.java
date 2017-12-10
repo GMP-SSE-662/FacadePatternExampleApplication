@@ -8,7 +8,7 @@ import media.SegmentedMedia;
  * into tracks, or songs.
  */
 public class Album implements SegmentedMedia {
-    String name;
+    private String name;
 
     /**
      * Constructs a new instance of an Album.

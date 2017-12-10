@@ -8,7 +8,7 @@ import media.SegmentedMedia;
  * broken into chapters.
  */
 public class Audiobook implements SegmentedMedia {
-    String name;
+    private String name;
 
     /**
      * Constructs a new instance of an Audiobook.

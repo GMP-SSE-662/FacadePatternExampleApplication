@@ -7,7 +7,7 @@ package media;
  * a Segmented Media object.
  */
 public class ContinuousAdapter implements SegmentedMedia {
-    ContinuousMedia media;
+    private ContinuousMedia media;
 
     /**
      * Constructs a new instance of Continuous Media Adapter.
