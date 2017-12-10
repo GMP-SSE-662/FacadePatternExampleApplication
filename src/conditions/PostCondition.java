@@ -1,5 +1,10 @@
 package conditions;
 
+/**
+ * <h1>Post Condition</h1>
+ * A Container object for output of all
+ * calculators in the system.
+ */
 public class PostCondition {
     private double height;
     private double endingVerticalVelocity;

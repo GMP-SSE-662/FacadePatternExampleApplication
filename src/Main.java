@@ -14,14 +14,15 @@ public class Main {
      */
     public static void main(String[] args) {
         FinalHeightCalculator heightCalc = new FinalHeightCalculator();
-        FinalLateralSpeedCalculator latSpeedCalc = new FinalLateralSpeedCalculator();
+        FinalVerticalVelocityCalculator vertVelocityCalc = new FinalVerticalVelocityCalculator();
+        FinalLateralVelocityCalculator latVelocityCalc = new FinalLateralVelocityCalculator();
         PossibleDistanceCalculator possibleDistCalc = new PossibleDistanceCalculator();
         AverageAccelerationCalculator avgAccelCalc = new AverageAccelerationCalculator();
         ForceOfGravityCalculator forceOfGravCalc = new ForceOfGravityCalculator();
         WorkByGravityCalculator workByGravCalc = new WorkByGravityCalculator();
 
         InitialCondition initCondition = new InitialCondition(10, -9.81, -2, 4, 5, 20, 10);
-        CalculatorFacade calcFacade = new CalculatorFacade(heightCalc, latSpeedCalc, possibleDistCalc, avgAccelCalc, forceOfGravCalc, workByGravCalc);
+        CalculatorFacade calcFacade = new CalculatorFacade(heightCalc, vertVelocityCalc, latVelocityCalc, possibleDistCalc, avgAccelCalc, forceOfGravCalc, workByGravCalc);
         PostCondition postCondition = calcFacade.getPostCondition(initCondition);
 
         System.out.println("Post Condition Values:");

@@ -1,5 +1,10 @@
 package conditions;
 
+/**
+ * <h1>Initial Condition</h1>
+ * A Container object for all needed
+ * calculator inputs.
+ */
 public class InitialCondition {
     private double height;
     private double accelDueGravity;
