@@ -14,13 +14,6 @@ public class AverageAccelerationCalculator {
     public AverageAccelerationCalculator() {
     }
 
-    /**
-     *
-     * @param initialVelocity
-     * @param plannedDistance
-     * @param duration
-     * @return
-     */
     public double calculateAverageAcceleration(double initialVelocity, double plannedDistance, double duration) {
         double avgAccel;
 

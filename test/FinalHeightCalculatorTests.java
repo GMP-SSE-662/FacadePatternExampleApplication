@@ -33,6 +33,4 @@ class FinalHeightCalculatorTests {
         double actual = testCalc.calculateFinalHeight(100,3, -9.81, 3);
         assertEquals(expected, actual, EPSILON, String.format("Expected: %s, Actual: %s", expected, actual));
     }
-
-
 }

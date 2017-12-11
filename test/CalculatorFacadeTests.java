@@ -12,9 +12,7 @@ class CalculatorFacadeTests {
     @Test
     void testFacade1() {
         InitialCondition initCondition = new InitialCondition(10, -9.81, -2, 4, 5, 20, 10);
-        testFacade = new CalculatorFacade(new FinalHeightCalculator(), new FinalVerticalVelocityCalculator(),
-                new FinalLateralVelocityCalculator(), new PossibleDistanceCalculator(), new AverageAccelerationCalculator(),
-                new ForceOfGravityCalculator(), new WorkByGravityCalculator());
+        testFacade = CalculatorFacade.getInstance();
         PostCondition postCondition = testFacade.getPostCondition(initCondition);
 
         assertEquals(postCondition.getHeight(), -122.625, EPSILON);

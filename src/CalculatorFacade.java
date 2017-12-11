@@ -16,21 +16,22 @@ public class CalculatorFacade {
     private ForceOfGravityCalculator forceOfGravCalc;
     private WorkByGravityCalculator workByGravCalc;
 
-    public CalculatorFacade(FinalHeightCalculator heightCalc,
-                     FinalVerticalVelocityCalculator vertVelocityCalc,
-                     FinalLateralVelocityCalculator latVelocityCalc,
-                     PossibleDistanceCalculator possibleDistCalc,
-                     AverageAccelerationCalculator avgAccelCalc,
-                     ForceOfGravityCalculator forceOfGravCalc,
-                     WorkByGravityCalculator workByGravCalc)
-    {
-        this.heightCalc = heightCalc;
-        this.vertVelocityCalc = vertVelocityCalc;
-        this.latVelocityCalc = latVelocityCalc;
-        this.possibleDistCalc = possibleDistCalc;
-        this.avgAccelCalc = avgAccelCalc;
-        this.forceOfGravCalc = forceOfGravCalc;
-        this.workByGravCalc = workByGravCalc;
+    private static CalculatorFacade instance;
+
+    public static CalculatorFacade getInstance() {
+        if (instance == null)
+            instance = new CalculatorFacade();
+        return instance;
+    }
+
+    private CalculatorFacade() {
+        heightCalc = new FinalHeightCalculator();
+        vertVelocityCalc = new FinalVerticalVelocityCalculator();
+        latVelocityCalc = new FinalLateralVelocityCalculator();
+        possibleDistCalc = new PossibleDistanceCalculator();
+        avgAccelCalc = new AverageAccelerationCalculator();
+        forceOfGravCalc = new ForceOfGravityCalculator();
+        workByGravCalc = new WorkByGravityCalculator();
     }
 
     public PostCondition getPostCondition(InitialCondition init) {
